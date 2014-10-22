@@ -262,12 +262,6 @@ function executeNode(node) {
                 var w = sizes[s].w;
                 var h = sizes[s].h;
                 if (s === sizes.length -1 || window.innerWidth * window.devicePixelRatio < sizes[s+1].w) {
-                    /*
-                    var max_w = undefined;
-                    if (s < sizes.length-1) {
-                        max_w = sizes[s+1].w;
-                    }
-                    */
                     var source = $("<source>");
                     var base_url = "";
                     if (window.location.host === "joeba.in") {
@@ -276,13 +270,7 @@ function executeNode(node) {
                         base_url = "videos_transcoded/";
                     }
                     source[0].src = base_url + getVideo(node.video) + "--" + h + "." + type.extension;
-                    /*
-                    if (max_w) {
-                        var media_string = "all and (max-width: " + max_w + "px)";
-                        source.attr("media", media_string);
-                    }
-                    */
-                    source.attr("type", type.type);// + "; codecs=" + type.codecs); // the codec malark seems to screw up firefox and stops it loading anything
+                    source.attr("type", type.type);
                     $("#video").append(source);
                     break;
                 }
