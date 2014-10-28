@@ -8,19 +8,14 @@
         <script src="lib/prefixfree.min.js"></script>
         <script src="lib/jquery-2.1.1.min.js"></script>
         <script src="lib/popcorn-complete.js"></script>
+
+        <link rel="stylesheet" href="lib/VCE/vce-style.css" type="text/css">
+        <script src="lib/VCE/vce.js"></script>
+
         <script src="main.js"></script>
     </head>
     <body>
         <div id="container">
-            <video id="video" preload="metadata"> <!-- firefox won't load a video unless we tell it to preload the metadata!? -->
-            </video>
-            <div id="overlay">
-                <div id="spinner"><div id="spinner-text">Loading...</div></div>
-                <div id="title"></div>
-                <div id="sub-title"></div>
-                <div id="error">There was an error playing the video!</div>
-                <div id="choices"></div>
-            </div>
         </div>
     </body>
 </html>
